@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Sushant Singh Rajput</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #2c3e50;
+            --bg-light: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+
+        /* Background Gradient Animation */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-top: 0;
+            background: linear-gradient(45deg, #ff6b6b, #f06595, #f8c8dc, #6a11cb);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            margin: 0 1rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Carousel Section */
+        .carousel-section {
+            margin-top: 75; /* Height of navbar */
+            margin-bottom: 4rem;
+        }
+
+        .carousel-item {
+            height: 80vh;
+        }
+
+        .carousel-item img {
+            height: auto;
+            width: 80px;;
+            object-fit: cover;
+
+
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 4rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .gallery-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-card img {
+            height: 650px;
+            object-fit: cover;
+        }
+
+        .gallery-card .card-body {
+            padding: 1.5rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .about-image {
+            border-radius: 50%;
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            margin: 0 auto 2rem;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievement-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .achievement-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 50vh;
+            }
+
+            .about-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .navbar-nav {
+                background-color: var(--primary-color);
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tribute to Sushant Singh Rajput</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section id="home" class="carousel-section">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.hdwallpapers.in/download/sushant_is_looking_up_wearing_black_and_blue_dress_hd_sushant_singh_rajput-2560x1440.jpg" class="d-block w-100" alt="First slide">
+                    <div class="carousel-caption">
+                        <h2>Life of Sushant Singh Rajput</h2>
+                        <p>A journey of passion, talent, and legacy.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.hdwallpapers.in/download/smiley_sushant_is_wearing_blue_checked_shirt_and_goggles_hd_sushant_singh_rajput-2560x1440.jpg" class="d-block w-100" alt="Second slide">
+                    <div class="carousel-caption">
+                        <h2>Unforgettable Performances</h2>
+                        <p>Impacting hearts with every role.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.dnaindia.com/sites/default/files/2021/08/21/991963-788720-sushant-singh-rajput-dna.jpg?im=FitAndFill=(1200,900)" class="d-block w-100" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h2>Inspiration to All</h2>
+                        <p>His work continues to inspire millions.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Life in Pictures</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <img src="https://static.theprint.in/wp-content/uploads/2022/06/Untitlehjmd-620220614155522.jpg" alt="Memory 1" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Early Years</h5>
+                            <p class="card-text">A glimpse into the beginning of an incredible journey.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <img src="https://w0.peakpx.com/wallpaper/691/735/HD-wallpaper-sushant-singh-rajput-handsome-handsome-thumbnail.jpg" alt="Memory 2" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Career Milestones</h5>
+                            <p class="card-text">His breakthrough in Bollywood and amazing performances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <img src="https://m.media-amazon.com/images/I/51kzVYvsUWL.jpg" alt="Memory 3" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Legacy</h5>
+                            <p class="card-text">The inspiration he left for future generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/ky0g58w0/poster/l/v/e/small-sushant-singh-rajput-actor-bollywood-handsome-rajput-singh-original-imagac5akzjpmefm.jpeg?q=90&crop=false" alt="Portrait" class="about-image">
+            <div class="about-content text-center">
+                <h2 class="mb-4">Sushant Singh Rajput</h2>
+                <p class="lead mb-4">1986 - 2020</p>
+                <div class="row mb-4">
+                    <div class="col-md-8 mx-auto">
+                        <p>Sushant Singh Rajput was an Indian actor known for his remarkable performances in television and film. He began his career with TV shows, gaining recognition for his role in "Pavitra Rishta," and transitioned to films with his debut in "Kai Po Che!" His film career includes memorable roles in "MS Dhoni: The Untold Story" and "Chhichhore." Sushant's untimely death in 2020 left a void in the entertainment world, but his legacy continues to inspire millions.</p>
+                    </div>
+                </div>
+                <h3 class="mb-3">Notable Achievements</h3>
+                <ul class="achievement-list mb-4">
+                    <li>Breakthrough role in "Kai Po Che!" (2013)</li>
+                    <li>Famous portrayal of MS Dhoni in "MS Dhoni: The Untold Story" (2016)</li>
+                    <li>Awarded for "Chhichhore" for Best Film (2019)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 | A Tribute to vijay Singh Rajput</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
